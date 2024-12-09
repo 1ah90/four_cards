@@ -1,0 +1,123 @@
+:root{
+    --red:hsl(0,78%,62%);
+    --Cyan:hsl(180, 62%, 55%);
+    --Orange:hsl(34, 97%, 64%);
+    --Blue:hsl(212, 86%, 64%);
+    --DarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+    --gapCard:30px;
+    --borderWidth: 8px;
+    --borderStyle: solid;
+
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    font-size: 15px;
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--VeryLightGray);
+}
+main{
+    padding: 30px;
+}
+
+ /* here is my text start */
+.text{
+    margin: auto;
+    text-align: center;
+    padding-bottom: 60px;
+
+}
+.text div{
+    margin: 40px 0 40px 0;
+}
+.text div p,
+.text div p strong{
+    font-weight: 500;
+    font-size: 50px;
+    text-transform: capitalize;
+}
+.text div p{
+    font-weight: 200;
+}
+
+.text .pra-title{
+    color: var(--GrayishBlue);
+    font-size: 22px;
+}
+
+/* here is where my cards start  */
+article{
+    display: grid;
+    gap: var(--gapCard);
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+}
+/*here is my border colors */
+article .card-1{
+    border-top-color: var(--Cyan);
+}
+article .card-2-3 .card-2{
+    border-top-color: var(--red);
+
+}
+article .card-2-3 .card-3{
+    border-top-color: var(--Orange);
+    margin-top: var(--gapCard);
+}
+article .card-4{
+    border-top-color: var(--Blue);
+}
+
+article .card-1,
+article .card-4{
+    margin: auto 0 auto 0;
+}
+article .card-1,
+article .card-2-3 .card-2,
+article .card-2-3 .card-3,
+article .card-4{
+    min-width: 300px;
+    min-height: 300px;
+    padding: 30px;
+    background-color: var(--VeryLightGray);
+    box-shadow: 0px 20px 20px 10px rgb(0, 0, 0,0.2);
+    border-top-width: var(--borderWidth);
+    border-top-style: var(--borderStyle);
+}
+article div h2{
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+article div p{
+    color: var(--DarkBlue);
+    padding-bottom: 60px;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+article div svg{
+    float:right;
+}
+
+@media (max-width:768px) {
+    main{
+        padding: 20px;
+    }
+
+    .text div p,
+    .text div p strong{
+        font-size: 25px;
+    }
+    .text .pra-title{
+        font-size: 18px;
+    }
+    article{
+        grid-template-columns: 1fr;
+    }
+}
